@@ -6,6 +6,6 @@ eureka:
   client:
     registerWithEureka: false
   server:
-    enableSelfPreservation: false
+    enable-self-preservation: false
     expected-client-renewal-interval-seconds: 3
     eviction-interval-timer-in-ms: 2000
