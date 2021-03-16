@@ -15,7 +15,7 @@ spring:
     name: geteway
   cloud:
     gateway:
-      dicovery:
+      discovery:
         locator:
           enable: true
           lower-case-service-id: true
