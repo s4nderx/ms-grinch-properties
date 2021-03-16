@@ -31,8 +31,3 @@ spring:
     port: ${JMS_PORT:61616}
     user: 'psander'
     password: '1234'
-springdoc:
-  api-docs:
-    path: /api-documentation
-  swagger-ui:
-    path: documentation
