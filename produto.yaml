@@ -1,0 +1,38 @@
+# DATASOURCE
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/exemplo
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  # H2 Console
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # JPA
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+        #      validate: validar o schema, não faz mudanças no banco de dados.
+        #      update: faz update o schema.
+        #      create: cria o schema, destruindo dados anteriores.
+      #      create-drop: drop o schema quando ao terminar a sessão.
+    show-sql: true
+    properties:
+      hibenate:
+        format_sql: true
+  artemis:
+    mode: native
+    host: ${JMS_HOST:localhost}
+    port: ${JMS_PORT:61616}
+    user: 'psander'
+    password: '1234'
+springdoc:
+  api-docs:
+    path: /api-documentation
+  swagger-ui:
+    path: documentation
